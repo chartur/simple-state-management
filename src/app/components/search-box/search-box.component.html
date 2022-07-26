@@ -1,0 +1,26 @@
+<div class="search-container">
+  <form
+    [formGroup]="searchForm"
+    (submit)="submit()"
+    (reset)="reset()"
+    class="search-from d-flex justify-content-center align-items-center"
+  >
+    <div class="input-container me-2">
+      <input
+        formControlName="query"
+        type="text"
+        class="form-control form-control-lg"
+        placeholder="Type something to search"
+      />
+    </div>
+    <div class="ms-2">
+      <button class="btn btn-lg btn-primary me-2">Search</button>
+      <button class="btn btn-lg btn-warning" type="reset">Reset</button>
+    </div>
+  </form>
+  <div class="text-center alert-container mt-3">
+    <small class="text-danger" *ngIf="showValidationError">
+      Search string is required!
+    </small>
+  </div>
+</div>

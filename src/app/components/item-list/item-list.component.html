@@ -1,0 +1,33 @@
+<div class="row row-eq-height">
+  <div
+    *ngFor="let item of items"
+    class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3"
+  >
+    <div class="card">
+      <div class="card-header">
+        {{ item.title }}
+      </div>
+      <div class="card-body">
+        <p>{{ item.body }}</p>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-end align-items-center">
+          <button
+            (click)="previewItem(item)"
+            type="button"
+            class="btn btn-sm btn-warning me-2"
+          >
+            Preview
+          </button>
+          <button
+            (click)="deleteItem(item)"
+            type="button"
+            class="btn btn-sm btn-danger me-2"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

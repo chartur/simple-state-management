@@ -1,0 +1,26 @@
+<div class="home-container">
+  <div class="search-element">
+    <app-search-box
+      (search)="onSearch($event)"
+      (reset)="onReset()"
+    ></app-search-box>
+  </div>
+
+  <div *ngIf="!(loading$ | async); else spinner">
+    <p>
+      <small class="text-dark">{{ (posts$ | async).length }} posts found</small>
+    </p>
+    <div>
+      <app-item-list
+        [items]="posts$ | async"
+        (delete)="onPostDelete($event)"
+      ></app-item-list>
+    </div>
+  </div>
+
+  <ng-template #spinner>
+    <div class="w-100 d-flex justify-content-center align-items-center">
+      <app-loading></app-loading>
+    </div>
+  </ng-template>
+</div>
