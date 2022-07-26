@@ -8,8 +8,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npm-run-all clean prettier:check lint build-ng test:coverage proof",
-    "build-ng": "ng build",
+    "build": "ng build",
+    "build-output": "npm-run-all clean prettier:check lint build-ng test:coverage proof",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "clean": "rimraf dist",
