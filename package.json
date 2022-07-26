@@ -2,7 +2,8 @@
   "name": "simple-state-managament-proj",
   "version": "0.0.0",
   "engines": {
-    "node": "17.9.1"
+    "node": "17.9.1",
+    "npm": "8.3.2"
   },
   "scripts": {
     "ng": "ng",
