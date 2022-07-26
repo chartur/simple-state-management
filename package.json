@@ -1,6 +1,9 @@
 {
   "name": "simple-state-managament-proj",
   "version": "0.0.0",
+  "engines": {
+    "node": "17.9.1"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
